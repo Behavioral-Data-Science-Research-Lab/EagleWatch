@@ -125,11 +125,9 @@ result = pandas.concat(frames, ignore_index=True)
 # perished_graph.set_xticklabels(perished_graph.get_xticklabels(), rotation=75)
 # plt.show()
 
-perished_year = sns.lineplot(x=result['Year'], y=result['Perished'])
-plt.show()
-fledged_year = sns.lineplot(x=result['Year'], y=result['Fledged'])
-plt.show()
-hatched_year = sns.lineplot(x=result['Year'], y=result['Hatched'])
+perished_year = sns.lineplot(x=result['Year'], y=result['Perished'], label='Perished')
+fledged_year = sns.lineplot(x=result['Year'], y=result['Fledged'], label='Fledged')
+hatched_year = sns.lineplot(x=result['Year'], y=result['Hatched'], label='Hatched')
 plt.show()
 
 
